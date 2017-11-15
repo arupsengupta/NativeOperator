@@ -1,22 +1,67 @@
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
-	<TextView 
-		android:layout_height="64dp"
+    android:orientation="vertical"
+    android:gravity="center">
+
+	<TextView
+	android:layout_height="wrap_content"
+	android:layout_width="match_parent"
+	android:text="New Booking"
+	android:padding="16dp"
+	android:textSize="20dp"
+	android:textColor="#ffffff"
+	android:textStyle="bold"
+	android:background="@android:color/holo_blue_light"
+	/>
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 		android:layout_width="match_parent"
-		android:text="Add New Booking"
-		android:textColor="#ffffff"
-		android:background="#FFFFBB33"/>
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:gravity="center"
+		android:padding="20dp">
+
     <EditText
-		android:id="@+id/contact"
-		android:layout_width="match_parent"
+		android:id="@+id/phone"
+		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:hint="@string/contact_hint"/>
-	<EditText
-		android:id="@+id/vehicle"
-		android:layout_width="match_parent"
+		android:hint="Enter mobile number"
+		android:inputType="number"
+		android:textSize="20dp"
+		android:maxLength="10"
+		/>
+	
+	<RadioGroup
+		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:hint="@string/vehicle_number_hint"/>
+		android:layout_marginTop="5dp"
+		android:orientation="horizontal">
+		
+		<RadioButton
+			android:id="@+id/carBike"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:checked="true"
+			android:layout_height="wrap_content"
+			android:drawableLeft="@drawable/ic_bike"
+		/>
+		<RadioButton
+			android:id="@+id/carRadio"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:drawableLeft="@drawable/ic_car"
+		/>
+	</RadioGroup>
+	
+	</LinearLayout>
+    <!--<Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="SEND SMS"
+        android:gravity="center"
+        android:onClick=""/>-->
 
 </LinearLayout>

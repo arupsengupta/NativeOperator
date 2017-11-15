@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">ScanQr</string>
+    <string name="app_name">Operator App</string>
     <string name="hello_world">Hello world!</string>
 	<string name="contact_hint">Mobile Number</string>
 	<string name="vehicle_number_hint">Vehicle Number</string>

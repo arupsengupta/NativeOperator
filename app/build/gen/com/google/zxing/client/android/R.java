@@ -103,22 +103,31 @@ containing a value of this type.
         public static final int zxing_viewfinder_mask=0x7f070009;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int ic_assignment=0x7f020000;
+        public static final int ic_bike=0x7f020001;
+        public static final int ic_car=0x7f020002;
+        public static final int ic_crop=0x7f020003;
+        public static final int ic_crop_free=0x7f020004;
+        public static final int ic_dialpad=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
     }
     public static final class id {
+        public static final int carBike=0x7f080010;
+        public static final int carRadio=0x7f080011;
         public static final int centerCrop=0x7f080008;
-        public static final int contact=0x7f080010;
         public static final int fitCenter=0x7f080009;
         public static final int fitXY=0x7f08000a;
-        public static final int mainButton=0x7f08000f;
-        public static final int name=0x7f08000b;
-        public static final int newButton=0x7f08000e;
-        public static final int phone=0x7f08000d;
-        public static final int vehicle=0x7f080011;
-        public static final int vehicle_no=0x7f08000c;
+        public static final int gridview=0x7f08000b;
+        public static final int numberButton=0x7f08000d;
+        public static final int otp=0x7f080012;
+        public static final int otpButton=0x7f08000e;
+        public static final int phone=0x7f08000f;
+        public static final int scanButton=0x7f08000c;
+        public static final int username=0x7f080013;
+        public static final int vehicle=0x7f080014;
         public static final int zxing_back_button=0x7f080000;
-        public static final int zxing_barcode_scanner=0x7f080015;
-        public static final int zxing_barcode_surface=0x7f080012;
+        public static final int zxing_barcode_scanner=0x7f080018;
+        public static final int zxing_barcode_surface=0x7f080015;
         public static final int zxing_camera_error=0x7f080001;
         public static final int zxing_decode=0x7f080002;
         public static final int zxing_decode_failed=0x7f080003;
@@ -126,14 +135,18 @@ containing a value of this type.
         public static final int zxing_possible_result_points=0x7f080005;
         public static final int zxing_preview_failed=0x7f080006;
         public static final int zxing_prewiew_size_ready=0x7f080007;
-        public static final int zxing_status_view=0x7f080014;
-        public static final int zxing_viewfinder_view=0x7f080013;
+        public static final int zxing_status_view=0x7f080017;
+        public static final int zxing_viewfinder_view=0x7f080016;
     }
     public static final class layout {
-        public static final int main=0x7f030000;
-        public static final int newentry=0x7f030001;
-        public static final int zxing_barcode_scanner=0x7f030002;
-        public static final int zxing_capture=0x7f030003;
+        public static final int booksuccess=0x7f030000;
+        public static final int home=0x7f030001;
+        public static final int main=0x7f030002;
+        public static final int newentry=0x7f030003;
+        public static final int otpdialog=0x7f030004;
+        public static final int userbooksuccess=0x7f030005;
+        public static final int zxing_barcode_scanner=0x7f030006;
+        public static final int zxing_capture=0x7f030007;
     }
     public static final class raw {
         public static final int zxing_beep=0x7f040000;

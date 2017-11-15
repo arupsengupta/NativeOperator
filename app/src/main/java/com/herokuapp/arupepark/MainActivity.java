@@ -17,8 +17,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import org.json.JSONObject;
 import android.app.DialogFragment;
+import android.widget.*;
+import android.widget.AdapterView.*;
 
-public class MainActivity extends Activity implements View.OnClickListener
+public class MainActivity extends Activity
 {
 	private Button scanButton;
 	private TextView name, vehicle_no, phone;
@@ -28,16 +30,24 @@ public class MainActivity extends Activity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.home);
+		GridView grid = (GridView) findViewById(R.id.gridview);
+		grid.setAdapter(new ButtonAdapter(this));
+		/*grid.setOnItemClickListener(new OnItemClickListener(){
+			public void onItemClick(AdapterView<?> parent, View v, int position, long id){
+				Toast.makeText(, "click : "+position, Toast.LENGTH_SHORT).show();
+			}
+		});*/
 		
-		scanButton = (Button) findViewById(R.id.mainButton);
+		
+		/*scanButton = (Button) findViewById(R.id.mainButton);
 		name = (TextView) findViewById(R.id.name);
 		phone = (TextView) findViewById(R.id.phone);
-		vehicle_no = (TextView) findViewById(R.id.vehicle_no);
+		vehicle_no = (TextView) findViewById(R.id.vehicle_no);*/
 		
 		qrScan = new IntentIntegrator(this);
 		qrScan.setOrientationLocked(false);
-		scanButton.setOnClickListener(this);
+		//scanButton.setOnClickListener(this);
     }
 
 	@Override
@@ -79,14 +89,18 @@ public class MainActivity extends Activity implements View.OnClickListener
 		}
 	}
 	
-	@Override
-	public void onClick(View view){
+	public void onClick(){
 		qrScan.initiateScan();
 	}
 	
-	public void newForm(View v){
+	public void newForm(){
 		DialogFragment dialog = new NewBookingDialog();
-		dialog.show(getFragmentManager(), "newBopkDialog");
+		dialog.show(getFragmentManager(), "newBookDialog");
+	}
+	
+	public void matchOTP(){
+		DialogFragment dialog = new OTPMatchDialog();
+		dialog.show(getFragmentManager(), "otpMatchDialog");
 	}
 	
 	public void showUser(String name, String vehicle){
